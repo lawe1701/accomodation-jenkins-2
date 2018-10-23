@@ -1,0 +1,24 @@
+*** settings ****
+Library                                  SeleniumLibrary
+
+Test Setup                               Setup
+Test Teardown                            Teardown
+
+*** keywords ****
+Setup
+    Open Browser                         https://evernote.com/intl/sv         chrome
+    Maximize Browser Window
+    Wait Until Page Contains             Logga in
+    Click Link                           link:www.evernote.com/Login.action    
+    Title Should Be                      Välkommen tillbaka
+        
+Teardown
+    Close All Browsers
+
+*** test case ****
+Test Case 1 - Perform Valid Login
+    Input Text                       id=login                            marc
+    Input Text                       id=senha                            1010                     
+    Click Element                    id=loginBtn
+    Wait Until Page Contains         
+    sleep   3

@@ -1,0 +1,40 @@
+*** Settings ***
+Library                        HttpLibrary.HTTP
+Library                        String
+
+
+*** Test cases ***
+Test case 1 - Request data from a Client with ID 1
+    Create Http Context        localhost:8080          http
+    Get                        /hotel-rest/webresources/client/1
+    ${status code}=            Get Response Status	
+    Should Start With	       ${status code}          200
+
+Test case 2 - Request data from all clients
+    Create Http Context        localhost:8080          http
+    Get                        /hotel-rest/webresources/client
+    ${status code}=            Get Response Status	
+    Should Start With	       ${status code}          200
+
+Test case 3 - Create new client
+    ${name}    Generate Random String    8    [LOWER]
+    ${email1}    Generate Random String    7    [LOWER]
+    ${email2}    Generate Random String    12    [LOWER]
+    ${email}    catenate    ${email1}    @    ${email2}
+    ${Social Security Number}    Generate Random String    12    [NUMBERS]
+    Create Http Context        localhost:8080          http
+    ${client dictionary}=      Create Dictionary       id=100  
+                               ...  name=${name}          createDate=14516172010000 
+                               ...  email=${eamil}    gender=m
+                               ...  socialSecurityNumber=${Social Security Number}
+    ${client Json}=            Stringify Json           ${client dictionary}
+    Set Request Body           ${client Json}
+    Set Request Header         Content-Type             application/json
+    Post                       /hotel-rest/webresources/client/ 
+    ${status code}=            Get Response Status	
+    Should Start With	       ${status code}          204
+    
+    
+    
+    
+    

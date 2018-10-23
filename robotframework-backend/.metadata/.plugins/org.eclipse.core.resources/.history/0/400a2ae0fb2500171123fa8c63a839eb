@@ -1,0 +1,24 @@
+*** Settings ***
+Library             Selenium2Library
+Library             OperatingSystem
+
+
+Test Setup                     Setup
+Test Teadown                   Teardown      
+
+*** Keywords ***
+Setup
+    Set Environment Variable       webdriver.chrome.driver                                  /usr/local/bin/chromedriver
+    
+    Open Browser                  http://localhost:8080/hotel/faces/login/login.xhtml       browser=chrome    
+    Set Selenium Speed             .2
+    Delete All Cookies
+    Wait Until Page Contains       login           30s 
+    
+Teardown
+    Sleep  2
+    Close All Browsers 
+
+*** Test Cases ***
+Test_Login
+    Wait Until Page Contains       login           30s

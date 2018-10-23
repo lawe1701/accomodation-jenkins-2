@@ -1,0 +1,11 @@
+*** Settings ***
+Library                        HttpLibrary.HTTP
+Library                        String
+Resource                       client-operations-control.robot
+
+*** Test cases ***
+Test case 1 - Request data from a client with ID
+    Request information of a specific clients and check status code  2
+
+Test case 2 - Request data from all clients
+    Request information of all clients and check status code

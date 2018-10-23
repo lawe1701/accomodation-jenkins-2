@@ -1,0 +1,10 @@
+*** Settings ***
+
+
+
+*** Variables ***
+${login pg username txt}        id=login
+${login pg password txt}        id=senha
+${login pg login btn}           id=loginBtn
+
+*** Keywords ***

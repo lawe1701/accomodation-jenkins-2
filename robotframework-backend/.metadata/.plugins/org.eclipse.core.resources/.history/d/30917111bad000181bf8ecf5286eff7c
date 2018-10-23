@@ -1,0 +1,16 @@
+*** Settings ***
+Library                     SeleniumLibrary
+Resource                    login-page.robot
+
+
+*** Variables ***
+${dashboard pg top-left-hand lbl}           Hotel Accommodadion
+${dashboard pg top-rigt-hand dropd}         xpath=//a[@class='dropdown-toggle']
+${dashboard pg top-rigt-hand dropd btn}     xpath=//i[@class='fa fa-sign-out fa-fw']
+${dashboard pg top-rigt-hand dropd btn click}    xpath=//i[@class='fa fa-sign-out fa-fw']
+
+*** Keywords ***
+Perform Logout
+    click element                    ${dashboard pg top-rigt-hand dropd}
+    click element                    ${dashboard pg top-rigt-hand dropd btn}
+    Title Should Be                  ${login pg title}

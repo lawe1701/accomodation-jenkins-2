@@ -1,0 +1,16 @@
+*** settings ****
+Library                              SeleniumLibrary
+
+Test Setup                           Setup
+Test Teardown                        Teardown
+
+*** keywords ****
+Setup
+    Open Browser                     https://evernote.com/intl/sv         chrome
+    Maximize Browser Window
+    Title Should Be                  Hotel Accomodation - login page
+        
+Teardown
+    Close All Browsers
+
+*** test case ****

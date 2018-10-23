@@ -1,0 +1,37 @@
+*** settings ****
+Library                                  SeleniumLibrary
+
+Test Setup                               Setup
+Test Teardown                            Teardown
+
+*** keywords ****
+Setup
+    #Set Environment Variable             webdriver.chrome.driver                                     /usr/local/bin/chromedriver
+    Open Browser                         https://evernote.com/intl/sv         chrome
+    Maximize Browser Window
+    Wait Until Page Contains             Logga in
+    Click Element                        xpath=//a[@class='button-outline']    
+    Title Should Be                      Welcome Back
+    
+    ${uname}                             set Variable                     lweingartner132
+    Input Text                           id=username                         ${uname}               
+    Click Element                        id=loginButton
+    Wait Until Page Contains Element     id=password
+    sleep            2
+    ${password}                          set Variable                                                                                                    PF-94-tdb
+    Input Password                       id=password                ${password}
+    Click Element                        id=loginButton
+    Wait Until Page Contains Element     id=qa-NAV_SEARCH_BOX
+        
+Teardown
+    Close All Browsers
+
+*** test cases ****
+ Test Case 1 - Create new Note   
+    Click Element                        id=qa-CREATE_NOTE
+#    Click Element                        class=_3UgUxSLR9QvWOSDpQG4Was
+    sleep                1
+    Input Text                           id=qa-NOTE_EDITOR_TITLE            Titel test 1
+    sleep                2
+    Wait Until Element Contains          class=_3TIyCU_wUTMuoCQS94lCzS      Titel test 1  
+    sleep                2

@@ -1,0 +1,22 @@
+*** settings ****
+Library                              SeleniumLibrary
+
+Test Setup                           Setup
+Test Teardown                        Teardown
+
+*** keywords ****
+Setup
+    Open Browser                     http://localhost:4848/hotel         chrome
+    Maximize Browser Window
+    Title Should Be                  Hotel Accomodation - login page
+        
+Teardown
+    Close All Browsers
+     
+
+*** test case ****
+Test Case 1 - Perform Valid Login
+    Input Text                       id=login                            marc
+    Input Text                       id=senha                            1010                     
+    Click Element                    id=loginBtn
+    sleep   3

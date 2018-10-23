@@ -1,0 +1,6 @@
+*** settings ****
+Library                        SeleniumLibrary
+
+*** keywords ****
+
+*** test case ****

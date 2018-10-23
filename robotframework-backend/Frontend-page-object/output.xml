@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181015 22:57:02.131" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/robot/workspace/Frontend-page-object/regression-frontend.robot" id="s1" name="Regression-Frontend">
+<test id="s1-t1" name="Test Case 1 - Login">
+<kw type="setup" name="Setup" library="Test-Setup_and-Teardown">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost:8080/hotel</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181015 22:57:02.340" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/hotel'.</msg>
+<status status="PASS" endtime="20181015 22:57:06.342" starttime="20181015 22:57:02.340"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181015 22:57:06.471" starttime="20181015 22:57:06.349"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Hotel Accomodation - login page</arg>
+</arguments>
+<msg timestamp="20181015 22:57:06.488" level="INFO">Page title is 'Hotel Accomodation - login page'.</msg>
+<status status="PASS" endtime="20181015 22:57:06.488" starttime="20181015 22:57:06.471"></status>
+</kw>
+<status status="PASS" endtime="20181015 22:57:06.489" starttime="20181015 22:57:02.338"></status>
+</kw>
+<kw name="Perform Valid Login" library="login-page">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login pg password txt}</arg>
+<arg>1010</arg>
+</arguments>
+<msg timestamp="20181015 22:57:06.490" level="INFO">Typing text '1010' into text field 'id=senha'.</msg>
+<status status="PASS" endtime="20181015 22:57:06.691" starttime="20181015 22:57:06.490"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login pg username txt}</arg>
+<arg>marc</arg>
+</arguments>
+<msg timestamp="20181015 22:57:06.692" level="INFO">Typing text 'marc' into text field 'id=login'.</msg>
+<status status="PASS" endtime="20181015 22:57:06.912" starttime="20181015 22:57:06.691"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login pg login btn}</arg>
+</arguments>
+<msg timestamp="20181015 22:57:06.912" level="INFO">Clicking element 'id=loginBtn'.</msg>
+<status status="PASS" endtime="20181015 22:57:07.803" starttime="20181015 22:57:06.912"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${dashboard pg top-left-hand lbl}</arg>
+</arguments>
+<status status="PASS" endtime="20181015 22:57:07.886" starttime="20181015 22:57:07.803"></status>
+</kw>
+<status status="PASS" endtime="20181015 22:57:07.886" starttime="20181015 22:57:06.489"></status>
+</kw>
+<kw name="Perform Logout" library="dashboard">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${dashboard pg top-rigt-hand dropd}</arg>
+</arguments>
+<msg timestamp="20181015 22:57:07.889" level="INFO">Clicking element 'xpath=//a[@class='dropdown-toggle']'.</msg>
+<status status="PASS" endtime="20181015 22:57:08.099" starttime="20181015 22:57:07.888"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${dashboard pg top-rigt-hand dropd btn}</arg>
+</arguments>
+<msg timestamp="20181015 22:57:08.101" level="INFO">Clicking element 'xpath=//i[@class='fa fa-sign-out fa-fw']'.</msg>
+<status status="PASS" endtime="20181015 22:57:08.645" starttime="20181015 22:57:08.100"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${login pg title}</arg>
+</arguments>
+<msg timestamp="20181015 22:57:08.677" level="INFO">Page title is 'Hotel Accomodation - login page'.</msg>
+<status status="PASS" endtime="20181015 22:57:08.677" starttime="20181015 22:57:08.645"></status>
+</kw>
+<status status="PASS" endtime="20181015 22:57:08.677" starttime="20181015 22:57:07.887"></status>
+</kw>
+<kw type="teardown" name="Teardown" library="Test-Setup_and-Teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20181015 22:57:08.762" starttime="20181015 22:57:08.678"></status>
+</kw>
+<status status="PASS" endtime="20181015 22:57:08.762" starttime="20181015 22:57:08.678"></status>
+</kw>
+<status status="PASS" endtime="20181015 22:57:08.762" critical="yes" starttime="20181015 22:57:02.336"></status>
+</test>
+<status status="PASS" endtime="20181015 22:57:08.766" starttime="20181015 22:57:02.135"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Regression-Frontend" pass="1">Regression-Frontend</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

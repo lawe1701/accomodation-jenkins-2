@@ -1,0 +1,9 @@
+*** Settings ***
+Library            HttpLibrary.HTTP
+
+
+*** Test cases ***
+Test case 1 - Hello world
+    log to console    Hello world!
+
+

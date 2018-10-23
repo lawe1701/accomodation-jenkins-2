@@ -1,0 +1,20 @@
+*** settings ****
+Library                              SeleniumLibrary
+
+Test Setup                           Setup
+Test Teardown                        Teardown
+
+*** keywords ****
+Setup
+    Open Browser                     http://localhost:8080/hotel         chrome
+    Maximize Browser Window
+    Title Should Be                  Hotel Accomodation - login page
+        
+Teardown
+    Close All Browsers
+     
+
+*** test case ****
+Test Case 1 - Perform Valid Login
+    Go to                            http://www.nackademin.com
+    Step                             3

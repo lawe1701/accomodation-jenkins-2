@@ -1,0 +1,29 @@
+*** settings ****
+Library                                  SeleniumLibrary
+
+Test Setup                               Setup
+Test Teardown                            Teardown
+
+*** keywords ****
+Setup
+    #Set Environment Variable             webdriver.chrome.driver                                     /usr/local/bin/chromedriver
+    Open Browser                         https://evernote.com/intl/sv         chrome
+    Maximize Browser Window
+    Wait Until Page Contains             Logga in
+    Click Element                        xpath=//a[@class='button-outline']    
+    Title Should Be                      Welcome Back
+        
+Teardown
+    Close All Browsers
+
+*** test cases ****
+Test Case 1 - Perform Valid Login
+    ${uname}                             set Variable                     lweingartner132
+    Input Text                           id=username                         ${uname}               
+    Click Element                        id=loginButton
+    Wait Until Page Contains Element     id=password
+    ${password}                          set Variable                                                                                                    PF-94-tdb
+    Input Password                       id=password                ${password}
+    Click Element                        id=loginButton
+    Wait Until Page Contains Element     id=qa-NAV_SEARCH_BOX
+    

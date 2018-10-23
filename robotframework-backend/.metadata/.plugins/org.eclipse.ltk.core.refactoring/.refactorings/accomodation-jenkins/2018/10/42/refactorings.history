@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;00_regression_tests.robot&apos; to &apos;Evernote-frontend&apos;&#x0A;- Original project: &apos;accomodation-jenkins&apos;&#x0A;- Destination element: &apos;Evernote-frontend&apos;&#x0A;- Original element: &apos;00_regression_tests.robot&apos;" description="Copy file" element1="robotframework-frontend/00_regression_tests.robot" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1539624429962" target="/Evernote/Evernote-frontend" units="0" version="1.0"/>
+</session>

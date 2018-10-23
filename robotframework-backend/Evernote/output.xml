@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181023 20:42:19.727" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/robot/workspace/Evernote" id="s1" name="Evernote">
+<suite source="/home/robot/workspace/Evernote/regression-frontend.robot" id="s1-s1" name="Regression-Frontend">
+<test id="s1-s1-t1" name="Test Case 1 - Create new Note">
+<kw type="setup" name="Setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://evernote.com/intl/sv</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181023 20:42:20.304" level="INFO">Opening browser 'chrome' to base url 'https://evernote.com/intl/sv'.</msg>
+<status status="PASS" endtime="20181023 20:42:30.033" starttime="20181023 20:42:20.303"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181023 20:42:30.177" starttime="20181023 20:42:30.035"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Logga in</arg>
+</arguments>
+<status status="PASS" endtime="20181023 20:42:30.341" starttime="20181023 20:42:30.178"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@class='button-outline']</arg>
+</arguments>
+<msg timestamp="20181023 20:42:30.342" level="INFO">Clicking element 'xpath=//a[@class='button-outline']'.</msg>
+<status status="PASS" endtime="20181023 20:42:34.847" starttime="20181023 20:42:30.341"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Welcome Back</arg>
+</arguments>
+<msg timestamp="20181023 20:42:34.882" level="INFO">Page title is 'Welcome Back'.</msg>
+<status status="PASS" endtime="20181023 20:42:34.883" starttime="20181023 20:42:34.848"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>lweingartner132</arg>
+</arguments>
+<assign>
+<var>${uname}</var>
+</assign>
+<msg timestamp="20181023 20:42:34.885" level="INFO">${uname} = lweingartner132</msg>
+<status status="PASS" endtime="20181023 20:42:34.885" starttime="20181023 20:42:34.884"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>${uname}</arg>
+</arguments>
+<msg timestamp="20181023 20:42:34.889" level="INFO">Typing text 'lweingartner132' into text field 'id=username'.</msg>
+<status status="PASS" endtime="20181023 20:42:35.296" starttime="20181023 20:42:34.886"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=loginButton</arg>
+</arguments>
+<msg timestamp="20181023 20:42:35.298" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" endtime="20181023 20:42:35.887" starttime="20181023 20:42:35.297"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>id=password</arg>
+</arguments>
+<status status="PASS" endtime="20181023 20:42:35.979" starttime="20181023 20:42:35.888"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181023 20:42:37.981" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181023 20:42:37.982" starttime="20181023 20:42:35.980"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>PF-94-tdb</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20181023 20:42:37.986" level="INFO">${password} = PF-94-tdb</msg>
+<status status="PASS" endtime="20181023 20:42:37.987" starttime="20181023 20:42:37.983"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181023 20:42:37.988" level="INFO">Typing password into text field 'id=password'.</msg>
+<status status="PASS" endtime="20181023 20:42:38.272" starttime="20181023 20:42:37.987"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=loginButton</arg>
+</arguments>
+<msg timestamp="20181023 20:42:38.274" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" endtime="20181023 20:42:44.244" starttime="20181023 20:42:38.273"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>id=qa-NAV_SEARCH_BOX</arg>
+</arguments>
+<status status="PASS" endtime="20181023 20:42:49.253" starttime="20181023 20:42:44.245"></status>
+</kw>
+<status status="PASS" endtime="20181023 20:42:49.254" starttime="20181023 20:42:20.300"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=qa-CREATE_NOTE</arg>
+</arguments>
+<msg timestamp="20181023 20:42:49.296" level="INFO">Clicking element 'id=qa-CREATE_NOTE'.</msg>
+<status status="PASS" endtime="20181023 20:42:49.883" starttime="20181023 20:42:49.255"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20181023 20:42:54.886" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181023 20:42:54.887" starttime="20181023 20:42:49.885"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=qa-NOTE_EDITOR_TITLE</arg>
+<arg>Titel test 1</arg>
+</arguments>
+<msg timestamp="20181023 20:42:54.889" level="INFO">Typing text 'Titel test 1' into text field 'id=qa-NOTE_EDITOR_TITLE'.</msg>
+<status status="PASS" endtime="20181023 20:42:55.350" starttime="20181023 20:42:54.888"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181023 20:42:57.352" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181023 20:42:57.352" starttime="20181023 20:42:55.351"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="en-note"]</arg>
+<arg>gdhagdsh</arg>
+</arguments>
+<msg timestamp="20181023 20:42:57.354" level="INFO">Typing text 'gdhagdsh' into text field 'xpath=//*[@id="en-note"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181023 20:42:57.539" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20181023 20:42:57.540" starttime="20181023 20:42:57.388"></status>
+</kw>
+<msg timestamp="20181023 20:42:57.543" level="FAIL">Element with locator 'xpath=//*[@id="en-note"]' not found.</msg>
+<status status="FAIL" endtime="20181023 20:42:57.544" starttime="20181023 20:42:57.353"></status>
+</kw>
+<kw type="teardown" name="Teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20181023 20:42:57.702" starttime="20181023 20:42:57.558"></status>
+</kw>
+<status status="PASS" endtime="20181023 20:42:57.706" starttime="20181023 20:42:57.553"></status>
+</kw>
+<status status="FAIL" endtime="20181023 20:42:57.706" critical="yes" starttime="20181023 20:42:20.297">Element with locator 'xpath=//*[@id="en-note"]' not found.</status>
+</test>
+<status status="FAIL" endtime="20181023 20:42:57.709" starttime="20181023 20:42:19.857"></status>
+</suite>
+<status status="FAIL" endtime="20181023 20:42:57.716" starttime="20181023 20:42:19.781"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Evernote" pass="0">Evernote</stat>
+<stat fail="1" id="s1-s1" name="Regression-Frontend" pass="0">Evernote.Regression-Frontend</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,9 @@
+*** Settings ***
+Library            HttpLibrary.HTTP
+
+
+*** Test cases ***
+Test case 1 - Request data from a Client with ID 1
+    log to console    Hello world!
+
+

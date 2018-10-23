@@ -1,0 +1,13 @@
+*** Settings ***
+Library                SeleniumLibrary
+Resource               login-page.robot
+
+Test Setup             Setup
+Test Teardown          Teardown
+
+*** keywords ****
+
+
+*** Test cases ***
+Test Case 1 - Login
+    Perform Valid Login

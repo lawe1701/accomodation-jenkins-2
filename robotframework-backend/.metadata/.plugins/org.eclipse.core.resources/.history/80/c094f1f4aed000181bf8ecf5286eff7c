@@ -1,0 +1,11 @@
+*** Settings ***
+
+
+
+*** Variables ***
+${login pg title}               Hotel Accomodation - login page
+${login pg username txt}        id=login
+${login pg password txt}        id=senha
+${login pg login btn}           id=loginBtn
+
+*** Keywords ***

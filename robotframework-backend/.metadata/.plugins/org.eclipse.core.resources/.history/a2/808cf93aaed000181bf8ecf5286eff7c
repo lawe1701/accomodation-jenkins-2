@@ -1,0 +1,9 @@
+*** Settings ***
+
+
+
+*** Variables ***
+${login pg username txt}
+${login pg password txt}
+
+*** Keywords ***

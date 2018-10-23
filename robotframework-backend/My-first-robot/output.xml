@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181015 20:08:00.184" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/robot/workspace/My-first-robot/regression-frontend.robot" id="s1" name="Regression-Frontend">
+<test id="s1-t1" name="Test Case 1 - Perform Valid Login">
+<kw type="setup" name="Setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost:8080/hotel</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181015 20:08:00.379" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/hotel'.</msg>
+<status status="PASS" endtime="20181015 20:08:04.827" starttime="20181015 20:08:00.378"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181015 20:08:04.966" starttime="20181015 20:08:04.828"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Hotel Accomodation - login page</arg>
+</arguments>
+<msg timestamp="20181015 20:08:05.010" level="INFO">Page title is 'Hotel Accomodation - login page'.</msg>
+<status status="PASS" endtime="20181015 20:08:05.011" starttime="20181015 20:08:04.967"></status>
+</kw>
+<status status="PASS" endtime="20181015 20:08:05.011" starttime="20181015 20:08:00.377"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=login</arg>
+<arg>marc</arg>
+</arguments>
+<msg timestamp="20181015 20:08:05.013" level="INFO">Typing text 'marc' into text field 'id=login'.</msg>
+<status status="PASS" endtime="20181015 20:08:05.280" starttime="20181015 20:08:05.012"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=senha</arg>
+<arg>1010</arg>
+</arguments>
+<msg timestamp="20181015 20:08:05.281" level="INFO">Typing text '1010' into text field 'id=senha'.</msg>
+<status status="PASS" endtime="20181015 20:08:05.475" starttime="20181015 20:08:05.281"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=loginBtn</arg>
+</arguments>
+<msg timestamp="20181015 20:08:05.477" level="INFO">Clicking element 'id=loginBtn'.</msg>
+<status status="PASS" endtime="20181015 20:08:06.481" starttime="20181015 20:08:05.476"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Hotel Accommodation</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181015 20:08:11.641" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20181015 20:08:11.642" starttime="20181015 20:08:11.488"></status>
+</kw>
+<msg timestamp="20181015 20:08:11.643" level="FAIL">Text 'Hotel Accommodation' did not appear in 5 seconds.</msg>
+<status status="FAIL" endtime="20181015 20:08:11.643" starttime="20181015 20:08:06.484"></status>
+</kw>
+<kw type="teardown" name="Teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20181015 20:08:11.727" starttime="20181015 20:08:11.644"></status>
+</kw>
+<status status="PASS" endtime="20181015 20:08:11.727" starttime="20181015 20:08:11.644"></status>
+</kw>
+<status status="FAIL" endtime="20181015 20:08:11.727" critical="yes" starttime="20181015 20:08:00.376">Text 'Hotel Accommodation' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" endtime="20181015 20:08:11.729" starttime="20181015 20:08:00.187"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Regression-Frontend" pass="0">Regression-Frontend</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,16 @@
+*** Settings ***
+Library                        HttpLibrary.HTTP
+
+
+*** Test cases ***
+Test case 1 - Request data from a Client with ID 1
+    Create Http Context        localhost:8080          http
+    Get                        /hotel-rest/webresources/client/1
+    ${status code}=            Get Response Status	
+    Should Start With	       ${status code}          200
+
+Test case 1 - Request data from all clients
+    Create Http Context        localhost:8080          http
+    Get                        /hotel-rest/webresources/client
+    ${status code}=            Get Response Status	
+    Should Start With	       ${status code}          200

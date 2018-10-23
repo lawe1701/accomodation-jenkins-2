@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.robotframework.ide.tableditor.activePage./accomodation-jenkins/robotframework-backend/client_operations.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./accomodation-jenkins/robotframework-backend/00_Regression_tests.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./accomodation-jenkins/robotframework-frontend/00_regression_tests.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./first-robot-project/00_regression_tests.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./accomodation-jenkins/first-robot-project/00_regression_tests.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./accomodation-jenkins/robot-framework-backend-proj1/client_operations.robot">
+		<item value="" key="activePage"/>
+	</section>
+</section>

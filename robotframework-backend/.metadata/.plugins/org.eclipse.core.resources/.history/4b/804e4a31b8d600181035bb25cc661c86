@@ -1,0 +1,25 @@
+*** settings ****
+Library                                  SeleniumLibrary
+
+Test Setup                               Setup
+Test Teardown                            Teardown
+
+*** keywords ****
+Setup
+    Open Browser                         https://evernote.com/intl/sv         chrome
+    Maximize Browser Window
+    Wait Until Page Contains             Logga in
+    Click Element                        xpath=//a[@class='button-outline']    
+    Title Should Be                      Welcome Back
+        
+Teardown
+    Close All Browsers
+
+*** test case ****
+Test Case 1 - Perform Valid Login
+    Input Text                       id=username                         lars.weingartner'@'yh.nackademin.se               
+    #   Click Element                    id=loginButton
+    #   sleep  3
+    #   Input Text                       id=password                                                                                                     PF-94-tdb
+    #   Click Element                    id=loginButton
+    sleep   3

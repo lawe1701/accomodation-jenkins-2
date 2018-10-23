@@ -1,0 +1,8 @@
+*** Variables ***
+
+*** Keywords ***
+Request information of all clients and check status code
+    Create Http Context        localhost:8080          http
+    Get                        /hotel-rest/webresources/client
+    ${status code}=            Get Response Status	
+    Should Start With	       ${status code}          200

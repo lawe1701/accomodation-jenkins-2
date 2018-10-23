@@ -1,0 +1,19 @@
+*** Settings ***
+Library                SeleniumLibrary
+Resource               login-page.robot
+
+Test Setup             Setup
+Test Teardown          Teardown
+
+*** keywords ****
+Setup
+    Open Browser               http://localhost:8080/hotel        chrome
+    Maximize Browser Window
+    Title Should Be            Hotel Accomodation - login page
+
+Teardown
+    Close All Browsers
+
+*** Test cases ***
+Test Case 1 - Login
+    Perform Valid Login

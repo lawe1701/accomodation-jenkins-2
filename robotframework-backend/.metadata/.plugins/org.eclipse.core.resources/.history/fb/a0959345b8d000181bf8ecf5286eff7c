@@ -1,0 +1,10 @@
+*** Settings ***
+Library                     SeleniumLibrary
+
+
+*** Variables ***
+${dashboard pg top-left-hand lbl}           Hotel Accommodadion
+
+*** Keywords ***
+Perform Logout
+    
